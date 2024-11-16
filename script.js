@@ -40,9 +40,9 @@ function setupEventListeners() {
         window.location.reload();
     });
 
-    // User icon - go to YouTube
+    // User icon
     document.querySelector('.user-icon').addEventListener('click', () => {
-        window.open('https://www.youtube.com', '_blank');
+        window.open('https://jeffersonrnd.github.io/LOG_SM/', '_blank');
     });
 
     // Category buttons
