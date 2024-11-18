@@ -19,8 +19,11 @@ const products = [
     { id: 18, name: 'Alfajores de maicena', price: '3.00', image: 'images/food18.png', category: 'Panadería' }
 ];
 
+
+// Cart state
 let cartItems = [];
 
+// Loading screen
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.getElementById('loadingScreen').style.display = 'none';
@@ -32,14 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function setupEventListeners() {
+    // Home icon - reload page
     document.querySelector('.home-icon').addEventListener('click', () => {
         window.location.reload();
     });
 
+    // User icon
     document.querySelector('.user-icon').addEventListener('click', () => {
         window.open('https://jeffersonrnd.github.io/LOG_SM/', '_blank');
     });
 
+    // Category buttons
     document.querySelectorAll('.category-buttons .btn').forEach(button => {
         button.addEventListener('click', () => {
             document.querySelectorAll('.category-buttons .btn').forEach(btn => {
@@ -47,11 +53,12 @@ function setupEventListeners() {
             });
             button.classList.add('active');
             const category = button.textContent.trim();
-            renderProducts(category);
+            renderProducts(category); 
         });
     });
 }
 
+// Toast notification
 function showToast(message) {
     const toast = document.createElement('div');
     toast.className = 'toast show';
@@ -63,6 +70,7 @@ function showToast(message) {
     }, 3000);
 }
 
+// Cart functions
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     const existingItem = cartItems.find(item => item.id === productId);
@@ -116,6 +124,8 @@ function processPay() {
 
 function renderProducts(category) {
     const productsGrid = document.getElementById('productsGrid');
+    
+    // Filtrar productos según la categoría seleccionada
     const filteredProducts = products.filter(product => product.category === category);
 
     productsGrid.innerHTML = filteredProducts.map(product => `
