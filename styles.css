@@ -37,32 +37,32 @@ body {
 }
 
 .logo-img {
-    height: 80px;  /* Tamaño más grande del logo */
+    height: 80px;
     filter: invert(1);
-    margin-left: 1px;  /* Espacio de 1px entre el logo y el ícono de la casa */
+    margin-left: 1px; 
 }
 
 
 
 .navbar-nav {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
-    align-items: center; /* Centra los elementos verticalmente */
-    gap: 1.5rem; /* Espacio entre los elementos */
-    width: 100%; /* Asegura que ocupe todo el ancho */
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
 }
 
 .navbar-nav .nav-item {
     display: flex;
-    justify-content: center; /* Centra el contenido de cada item */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-nav .nav-link {
-    color: white; /* Color de los enlaces */
+    color: white;
     display: flex;
-    justify-content: center; /* Centra el contenido de cada nav-link */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Barra de búsqueda */
@@ -90,19 +90,19 @@ body {
 /* Social Icons */
 .social-icons {
     display: flex;
-    justify-content: center; /* Centra los íconos */
-    gap: 1rem; /* Espacio entre los íconos */
+    justify-content: center;
+    gap: 1rem;
 }
 
 .social-icon {
     width: 24px;
     height: 24px;
     transition: transform 0.2s;
-    filter: invert(1); /* Invertir los colores */
+    filter: invert(1);
 }
 
 .social-icon:hover {
-    transform: scale(1.1); /* Efecto de hover */
+    transform: scale(1.1);
 }
 
 /* Toast Notification */
