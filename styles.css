@@ -37,7 +37,7 @@ body {
 }
 
 .logo-img {
-    height: 80px;
+    height: 80px; 
     filter: invert(1);
     margin-left: 1px; 
 }
@@ -46,23 +46,23 @@ body {
 
 .navbar-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
+    justify-content: center; 
+    align-items: center; 
+    gap: 1.5rem; 
+    width: 100%; 
 }
 
 .navbar-nav .nav-item {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .navbar-nav .nav-link {
-    color: white;
+    color: white; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
 }
 
 /* Barra de búsqueda */
@@ -90,19 +90,19 @@ body {
 /* Social Icons */
 .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: center; 
+    gap: 1rem; 
 }
 
 .social-icon {
     width: 24px;
     height: 24px;
     transition: transform 0.2s;
-    filter: invert(1);
+    filter: invert(1); 
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); 
 }
 
 /* Toast Notification */
