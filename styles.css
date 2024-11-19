@@ -1,4 +1,4 @@
-/* Loading Screen */
+/* pantalla cargando*/
 .loading-screen {
     position: fixed;
     top: 0;
@@ -24,13 +24,13 @@
     font-size: 1.5rem;
 }
 
-/* General Styles */
+/* estilos generales */
 body {
     background-color: black;
     color: white;
 }
 
-/* Logo and Navigation */
+/* navegacion y logo*/
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -87,7 +87,7 @@ body {
     color: #666;
 }
 
-/* Social Icons */
+/* redes */
 .social-icons {
     display: flex;
     justify-content: center; 
@@ -105,7 +105,7 @@ body {
     transform: scale(1.1); 
 }
 
-/* Toast Notification */
+/* Notificación */
 .toast {
     position: fixed;
     top: 20px;
@@ -117,7 +117,7 @@ body {
     z-index: 1000;
 }
 
-/* Cart Modal */
+/* Modal */
 .cart-items {
     max-height: 300px;
     overflow-y: auto;
@@ -138,7 +138,7 @@ body {
     border-radius: 4px;
 }
 
-/* Sections */
+/* Secciones */
 .section-title {
     text-align: center;
     margin-bottom: 2rem;
