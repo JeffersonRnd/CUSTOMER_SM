@@ -36,7 +36,7 @@ function saveCartToStorage() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
 }
 
-// Evento DOMContentLoaded
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.getElementById('loadingScreen').style.display = 'none';
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
 
     loadCartFromStorage();
-    renderProducts();
     setupEventListeners();
 });
 
@@ -57,6 +56,7 @@ function setupEventListeners() {
         window.open('https://jeffersonrnd.github.io/LOG_SM/', '_blank');
     });
 
+    
     document.querySelectorAll('.category-buttons .btn').forEach(button => {
         button.addEventListener('click', () => {
             document.querySelectorAll('.category-buttons .btn').forEach(btn => {
@@ -64,9 +64,10 @@ function setupEventListeners() {
             });
             button.classList.add('active');
             const category = button.textContent.trim();
-            renderProducts(category);
+            renderProducts(category); // Renderizar productos de la categoría seleccionada
         });
     });
+    
 }
 
 function showToast(message) {
@@ -136,8 +137,12 @@ function processPay() {
 
 function renderProducts(category) {
     const productsGrid = document.getElementById('productsGrid');
+    const filteredProducts = products.filter(product => product.category === category);
 
-    const filteredProducts = products.filter(product => !category || product.category === category);
+    if (filteredProducts.length === 0) {
+        productsGrid.innerHTML = '<p>No hay productos en esta categoría.</p>';
+        return;
+    }
 
     productsGrid.innerHTML = filteredProducts.map(product => `
         <div class="product-card">
